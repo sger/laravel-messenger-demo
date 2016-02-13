@@ -1,6 +1,6 @@
 # Laravel Messenger Demo
 
-Demo app of [https://github.com/cmgmyr/laravel-messenger](https://github.com/cmgmyr/laravel-messenger)
+Demo app of [Laravel Messenger](https://github.com/cmgmyr/laravel-messenger)
 
 Requires Laravel 5.2.*
 
