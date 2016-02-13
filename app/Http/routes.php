@@ -26,12 +26,14 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
-
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
-});
+
+    Route::get('/messages', ['as' => 'messages', 'uses' => 'MessagesController@index']);
+    Route::get('/messages/create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
+    Route::post('/messages', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
+    Route::get('/messages/{id}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
+    Route::put('/messages/{id}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
+})
