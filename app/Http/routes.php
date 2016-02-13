@@ -36,4 +36,4 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/messages', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
     Route::get('/messages/{id}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
     Route::put('/messages/{id}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
-})
+});
