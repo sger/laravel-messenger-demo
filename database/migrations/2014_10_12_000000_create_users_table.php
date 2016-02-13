@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password', 60);
+            $table->enum('notify', ['y', 'n'])->default('y');
             $table->rememberToken();
             $table->timestamps();
         });
